@@ -4,8 +4,9 @@
   <meta charset="utf-8"/>
   <title>Text Game</title>
   <!--link rel="stylesheet" href="icon.css"-->
-  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <!--link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet"-->
+  <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css"-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <style>
@@ -46,6 +47,8 @@
       text-indent: 2em;
       opacity: 0;
       transition: 500ms ease-in-out;
+      font-size: 2.5vmin;
+      line-height: calc(2.5vmin + 5px;)
     }
     p.visible {
       opacity: 1 !important;
@@ -108,9 +111,40 @@
       border-bottom: 0px solid rgba(0, 0, 0, 0);
       border-right: 100vw solid #2196f3;
     }
+    #arrow {
+      font-size: 20em;
+      margin: auto;
+      top: calc(40%);
+      right: 0;
+      position: absolute;
+      transition: 1000ms ease-in-out;
+    }
+    #arrow.down {
+      transform: translate(0, 20%);
+    }
+    #arrow.away {
+      transform: translate(0, 500%)
+    }
+    .side {
+      width: 30vw;
+      height: 100vh;
+      position: absolute;
+    }
+    #title {
+      font-family: "Product Sans", Roboto, "Trebuchet MS", sans-serif;
+      font-size: 4em;
+      transition: 500ms ease-in-out;
+      position: absolute;
+      margin-left: 10px;
+    }
+    #title.move {
+      transform: translate(0, -5em);
+    }
   </style>
   <div style="height: 100vh; width: 100vw;">
     <section class="panel blue">
+      <i id="arrow" class="material-icons">arrow_downward</i>
+      <h1 id="title">The Origin of Billy Bluejay</h1>
       <div class="text right">
         <p>Edward Creighton and John Creighton were brothers who lived in the developing city of Omaha, Nebraska. Edward was a strong-willed, ambitious man. He helped to build the telegraph lines from New York to California. Then, he began his own business--First National Bank.</p>
         <p>The end of Edward’s life happened suddenly and unexpectedly. He died as he was entering a meeting for First National Bank. When John heard about this, he fell into extreme despair. The days became weeks as John mourned his brother’s death. The gods felt pity for John and decided that Edward deserved to return to his brother.</p>
@@ -147,9 +181,16 @@
   </div>
 
   <script src="/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script>
+
+  WebFont.load({
+    google: {
+      families: ['Scope One', 'Roboto', 'Product Sans']
+    }
+  });
 
   var cumulativeOffset = function(element) {
     var top = 0, left = 0;
@@ -164,6 +205,14 @@
       left: left
     };
   };
+
+  function toggleClass(selector, Class) {
+    var ele = $(selector)
+    ele.hasClass(Class) ? ele.removeClass(Class) : ele.addClass(Class)
+    return(ele)
+  }
+
+  var inter;
 
   $(function(){
     var controller = new ScrollMagic.Controller({
@@ -194,13 +243,32 @@
 
     for (var i=0; i < pars.length; i++) {
       pars[i].id = "para" + i
-      var t = new ScrollMagic.Scene({
+      new ScrollMagic.Scene({
         offset: cumulativeOffset(pars[i]).top
       })
       .setClassToggle("#para" + i, "visible")
       .addIndicators()
       .addTo(controller)
     }
+
+    new ScrollMagic.Scene({
+      offset: cumulativeOffset($("#para0")[0]).top
+    })
+    .setClassToggle("h1", "move")
+    .addIndicators()
+    .addTo(controller)
+
+    new ScrollMagic.Scene({
+      offset: cumulativeOffset($("#para0")[0]).top
+    })
+    .setClassToggle("#arrow", "away")
+    .addIndicators()
+    .addTo(controller)
+
+    inter = setInterval(function () {
+      toggleClass("#arrow", "down")
+      $("#arrow").hasClass("away") ? setTimeout(function(){$("#arrow")[0].style.display = "none"}, 1000) : $("#arrow")[0].style.display = "block"
+    }, 1000);
   });
   </script>
 
