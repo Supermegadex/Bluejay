@@ -1,0 +1,48 @@
+{
+  "name": "quoteya",
+  "version": "0.0.0",
+  "description": "A web application for sharing quotes",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js",
+    "debug": "node --debug app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Athletesrun/client-folder.git"
+  },
+  "env": {
+    "PYTHON": "py"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "author": "Ben Wingerter and Daniel Noon",
+  "bugs": {
+    "url": "https://github.com/Athletesrun/quoteya/issues"
+  },
+  "license": "none",
+  "homepage": "https://github.com/Athletesrun/quoteya#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "bookshelf": "^0.10.0",
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "crypto-browserify": "^3.11.0",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.0.1",
+    "knex": "^0.11.7",
+    "multer": "^1.2.0",
+    "pg": "^6.0.3",
+    "pug": "^2.0.0-beta3",
+    "request": "^2.74.0",
+    "s3": "^4.4.0",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8",
+    "socketio-jwt": "^4.5.0",
+    "underscore": "^1.8.3"
+  }
+}
