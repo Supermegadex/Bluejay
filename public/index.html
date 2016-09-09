@@ -2,7 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Text Game</title>
+  <title>Creation Myth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
   <!--link rel="stylesheet" href="icon.css"-->
   <!--link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet"-->
   <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css"-->
@@ -71,7 +73,7 @@
       background-color: #fff;
     }
     .blue {
-  		margin-bottom: 600px;
+  		margin-bottom: 800px;
       background-color: #2196f3;
     }
     .bordeaux {
@@ -98,7 +100,51 @@
       height: 0px;
       border-top: 120px solid rgba(0, 0, 0, 0);
       border-bottom: 0px solid rgba(0, 0, 0, 0);
-      border-left: 100vw solid green;
+      border-left: 100vw solid #00C853;
+    }
+    .thingy-green-b {
+      position: absolute;
+      z-index: 200;
+      top: -120px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      border-top: 120px solid rgba(0, 0, 0, 0);
+      border-bottom:  solid rgba(0, 0, 0, 0);
+      border-left: 100vw solid #00C853;
+    }
+    .thingy-green-c {
+      position: absolute;
+      z-index: 200;
+      top: -120px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      border-top: 120px solid rgba(0, 0, 0, 0);
+      border-bottom: 0 solid rgba(0, 0, 0, 0);
+      border-right: 100vw solid #00C853;
+    }
+    .thingy-div {
+      position: absolute;
+      z-index: 200;
+      top: -120px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      border-top: 120px solid rgba(0, 0, 0, 0);
+      border-bottom: 120px solid rgba(0, 0, 0, 0);
+      border-left: 100vw solid #00BFA5;
+    }
+    .thingy-div-b {
+      position: absolute;
+      z-index: 200;
+      top: 0px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      border-top: 120px solid rgba(0, 0, 0, 0);
+      border-bottom: 0px solid rgba(0, 0, 0, 0);
+      border-right: 100vw solid #00BFA5;
     }
     .thingy-left {
       position: absolute;
@@ -135,21 +181,47 @@
       font-size: 4em;
       transition: 500ms ease-in-out;
       position: absolute;
-      margin-left: 10px;
+      margin-left: 25px;
     }
     #title.move {
       transform: translate(0, -5em);
     }
+
+    #title2 {
+      font-family: "Product Sans", Roboto, "Trebuchet MS", sans-serif;
+      font-size: 4em;
+      transform: translate(-100vw, 0);
+      transition: 500ms ease-in-out;
+      position: absolute;
+      margin-left: 25px;
+      top: 40vh;
+    }
+    #title2.move {
+      transform: translate(0, 0);
+    }
   </style>
   <div style="height: 100vh; width: 100vw;">
     <section class="panel blue">
-      <i id="arrow" class="material-icons">arrow_downward</i>
+      <i id="arrow" class="material-icons">keyboard_arrow_down</i>
       <h1 id="title">The Origin of Billy Bluejay</h1>
       <div class="text right">
-        <p>Edward Creighton and John Creighton were brothers who lived in the developing city of Omaha, Nebraska. Edward was a strong-willed, ambitious man. He helped to build the telegraph lines from New York to California. Then, he began his own business--First National Bank.</p>
-        <p>The end of Edward’s life happened suddenly and unexpectedly. He died as he was entering a meeting for First National Bank. When John heard about this, he fell into extreme despair. The days became weeks as John mourned his brother’s death. The gods felt pity for John and decided that Edward deserved to return to his brother.</p>
-        <p>However, none of the gods had the power to raise a human from the dead; so, they decided to bring Edward back in the form of an animal. “But what animal?” they wondered amongst themselves.</p>
-        <p>Eventually, they settled on a blue jay because of its loud, assertive nature. Edward was loud in the way that he was a huge advocate for a great many movements, such as anti-slavery and the selection of Omaha as the terminus for the Union Pacific Railroad. He was also strong and independent like the blue jay, digging holes for telegraph lines and trekking across the country.</p>
+        <p>More than one hundred years ago, Edward and John Creighton were brothers who lived in the developing city of Omaha, Nebraska. Edward was a strong-willed, ambitious man. He helped to build the telegraph lines from New York to California. Then, he began his own business--The First National Bank. His brother, John, was no less of an amazing man. He created Creighton College and his philanthropy knew no bounds. However, both brothers knew Ed’s health was on the decline when he suffered from a stroke in 1871.</p>
+        <p>Edward died just as he was entering a meeting for First National Bank. He had a second massive stroke and was unable to recover. When John heard about his brother’s death, he was greatly distraught. Edward collapsed onto his bed and cried his heart out. He knew he had to get his brother back… <em>somehow…</em>. </p>
+        <p>The following year, events unfolded which no history book mentions: John learned the nature of the human soul through experiments with white magic, and was able to bring back his brother. Unfortunately, because bringing back Edward would require a human host, John would need to deposit him in an animal’s body to avoid murdering someone. John spent days researching different species of animals and finding their similarities to Edward. Upon one visit to the library, a strange woman wearing a cloak of opaque black brought an ornithology book to him.</p>
+      </div>
+    </section>
+    <section class="panel blue">
+    <div class="thingy-div"></div>
+    <div class="thingy-div-b"></div>
+    <img src="/ornith.gif" alt="Ornithology Book" style="margin-top: 120px; max-width: 30vw;" />
+      <div class="text right" style="padding-top: 150px">
+        <p>“This is what you’re looking for,” she spoke, her voice aged and raspy. A gnarled finger pointed to picture of a bluejay.</p>
+        <p>“What?”</p>
+        <p>“bluejays are strong creatures that defend what’s important to them.”</p>
+        <p>“Why are you telling me this?”</p>
+        <p>“Your brother, John. I know that you’re looking for a vessel for his soul.”</p>
+        <p>Puzzled, John read the entry about bluejays. The more he read, the more he recognized John in the bird. He looked up to thank the woman, but she was gone. All that remained was a single black feather.</p>
+        <p>In a fever of excitement, John rushed the book home and commenced his work. He hoped that, at last, he would find a new home for his brother’s soul.</p>
       </div>
     </section>
     <section class="panel grey">
@@ -157,25 +229,22 @@
     <div class="thingy-green"></div>
     <img src="/bluejay.gif" alt="bluejay" id="wcbj" />
       <div class="text">
-        <p>John woke up to find himself in a tree overlooking his business’s building. Experimentally, he flapped his wings and jumped from the tree. He spread his wings and floated to the ground. Interested in the project his brother had started working on, Edward flew to the construction site. He noticed his brother sitting at the edge of the site, obviously sad. Ed swooped down from the sky and landed next to John. He chirped loudly and got John’s attention.</p>
-        <p>“Hello, little blue jay. What’s got you all worked up?” John fluttered around for a bit, but he realized he could not speak. All was not lost, though, for John attended a football game the next day.</p>
-      </div>
-    </section>
-    <section class="panel blue">
-    <div class="thingy-left"></div>
-      <div class="text right">
-        <p>That very next day, Edward found John in the stadium. When the home team got a touchdown, Edward squawked with glee. It was at that moment that John realized whom he was in the company of.</p>
-        <p>“Edward, is that you?”</p>
-        <p>The blue bird nodded his head.</p>
-        <p>“Wow… how did this happen?”</p>
-        <p>It was then that the gods spoke to John. They explained that they brought Edward back to him, but he must never tell of his brother’s resurrection. With this, Edward returned to his project, Creighton College, and told his wife, Mary Lucretia, to make the school mascot a blue jay.</p>
+        <p>The next morning, Edward woke up to find himself in a tree overlooking his business’s building. He looked down at his chest to see a large tuft of blue and white. He glanced up at where his arms were to notice two large wings. “Oh, dear me, I’m a bird!” he squawked to himself. Experimentally, he flapped his wings and jumped from the tree. He spread his wings and floated gently to the ground.</p>
+        <p>Just was he was when he was a man, Edward the bluejay was brave, proud, and strong. Every day, he was free to visit all of the projects he and his brother had built in the now-great city of Omaha. He visited the First National Bank and stood on the telegraph lines, observing the progress of the city. He occasionally visited an old woman who wore a black cloak at the park, where she fed him yummy seeds. Best of all, he enjoyed watching the construction of a great new school rise from the earth: Creighton College, the center of learning his brother envisioned and built. Over the years, the bird watched the young athletic teams battle on the field and scholars compete in challenges of the mind. Like Edward, the young men were courageous, strong, and ambitious; yet, like him, they also cared for and protected what they loved.</p>
       </div>
     </section>
     <section class="panel grey">
-    <div class="thingy-right"></div>
+    <div class="thingy-green-b"></div>
+    <div class="thingy-green-c"></div>
+    <h1 id="title2">
+      Billy Bluejay
+      <i class="material-icons" style="font-size: 1.5em; transform: translate(0, .25em);">keyboard_arrow_right</i>
+    </h1>
+    <!--div class="thingy-right"></div-->
       <img id="billy" src="https://www.creighton.edu/fileadmin/user/CSU/images/Billy_Bluejay_RGB.jpg">
       <div class="text">
-        <p>That very next day, Edward found John in the stadium. When the home team got a touchdown, Edward squawked with glee. It was at that moment that John realized whom he was in the company of.</p>
+        <p>John saw the connection between his brother and the spirit of the school. He knew that there would be no better mascot for Creighton College than that of Edward, the tenacious bluejay. To this day, the bluejay remains the mascot of both Creighton University and its preparatory school, Creighton Prep. Edward’s spirit still lives on in the bluejay that symbolizes the greatness of the school’s graduates and faculty--tenacious leaders, every one.</p>
+        <p></p>
       </div>
     </section>
   </div>
@@ -183,12 +252,12 @@
   <script src="/jquery.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <!--script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug//.addIndicators.min.js"></script-->
   <script>
 
   WebFont.load({
     google: {
-      families: ['Scope One', 'Roboto', 'Product Sans']
+      families: ['Scope One', 'Roboto']
     }
   });
 
@@ -228,7 +297,7 @@
         triggerElement: slides[i]
       })
       .setPin(slides[i])
-      .addIndicators()
+      //.addIndicators()
       .addTo(controller)
     }
 
@@ -236,7 +305,7 @@
       offset: cumulativeOffset(document.querySelector("#wcbj")).top
     })
     .setClassToggle("#wcbj", "flew")
-    .addIndicators()
+    //.addIndicators()
     .addTo(controller)
 
     pars = document.querySelectorAll("p")
@@ -244,30 +313,37 @@
     for (var i=0; i < pars.length; i++) {
       pars[i].id = "para" + i
       new ScrollMagic.Scene({
-        offset: cumulativeOffset(pars[i]).top
+        offset: (i == 0) ? cumulativeOffset(pars[i]).top - 10 : cumulativeOffset(pars[i]).top
       })
       .setClassToggle("#para" + i, "visible")
-      .addIndicators()
+      //.addIndicators()
       .addTo(controller)
     }
 
     new ScrollMagic.Scene({
       offset: cumulativeOffset($("#para0")[0]).top
     })
-    .setClassToggle("h1", "move")
-    .addIndicators()
+    .setClassToggle("#title", "move")
+    //.addIndicators()
+    .addTo(controller)
+
+    new ScrollMagic.Scene({
+      offset: cumulativeOffset($("#para13")[0]).top
+    })
+    .setClassToggle("#title2", "move")
+    //.addIndicators()
     .addTo(controller)
 
     new ScrollMagic.Scene({
       offset: cumulativeOffset($("#para0")[0]).top
     })
     .setClassToggle("#arrow", "away")
-    .addIndicators()
+    //.addIndicators()
     .addTo(controller)
 
     inter = setInterval(function () {
       toggleClass("#arrow", "down")
-      $("#arrow").hasClass("away") ? setTimeout(function(){$("#arrow")[0].style.display = "none"}, 1000) : $("#arrow")[0].style.display = "block"
+      //$("#arrow").hasClass("away") ? setTimeout(function(){$("#arrow")[0].style.display = "none"}, 1000) : $("#arrow")[0].style.display = "block"
     }, 1000);
   });
   </script>
